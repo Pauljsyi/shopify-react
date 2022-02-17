@@ -1,15 +1,48 @@
 import React, { Component } from "react";
 import Client from "shopify-buy";
 
+const ShopContext = React.createContext();
+
 const client = Client.buildClient({
-  domain: "your-shop-name.myshopify.com",
-  storefrontAccessToken: "your-storefront-access-token",
+  domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
+  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API,
 });
 
 export class ShopProvider extends Component {
+  state = {
+    product: {},
+    products: [],
+    checkout: {},
+    isCartOpen: false,
+    isMenuOpen: false,
+  };
+
+  createCheckout = async () => {};
+
+  fetchCheckout = async () => {};
+
+  addItemToCheckout = async () => {};
+
+  removeLineItem = async (lineItemIdsToRemove) => {};
+
+  fetchAllProducts = async () => {};
+
+  fetchProductWithHandle = async (handle) => {};
+
+  closeCart = () => {};
+
+  openCart = () => {};
+
+  closeMenu = () => {};
+
+  openMenu = () => {};
   render() {
-    return <div>shopContext</div>;
+    return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>;
   }
 }
+
+const ShopConsumer = Shopcontext.ShopConsumer;
+
+export { ShopConsumer, ShopContext };
 
 export default ShopProvider;
