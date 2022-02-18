@@ -5,10 +5,10 @@ const ShopContext = React.createContext();
 
 const client = Client.buildClient({
   domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
-  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API,
+  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API
 });
 
-export class ShopProvider extends Component {
+class ShopProvider extends Component {
   state = {
     product: {},
     products: [],
@@ -17,7 +17,18 @@ export class ShopProvider extends Component {
     isMenuOpen: false,
   };
 
-  createCheckout = async () => {};
+  componentDidMount() {
+    this.createCheckout();
+  };
+
+  //save cart state for user
+  //local storage
+  createCheckout = async () => {
+    // Create an empty checkout
+    const checkout = await client.checkout.create();
+    localStorage.setItem("checkout-id", checkout.id);
+    this.setState({ checkout: checkout });
+  };
 
   fetchCheckout = async () => {};
 
@@ -25,9 +36,17 @@ export class ShopProvider extends Component {
 
   removeLineItem = async (lineItemIdsToRemove) => {};
 
-  fetchAllProducts = async () => {};
+  fetchAllProducts = async () => {
+    // Fetch all products in shop
+    const products = await client.product.fetchAll();
+    this.setState({ products: products });
+  };
 
-  fetchProductWithHandle = async (handle) => {};
+  fetchProductWithHandle = async (handle) => {
+    // Fetch a single product by Handle
+    const product = await client.product.fetchByHandle(handle);
+    this.setState({ product: product });
+  };
 
   closeCart = () => {};
 
@@ -36,12 +55,18 @@ export class ShopProvider extends Component {
   closeMenu = () => {};
 
   openMenu = () => {};
+
   render() {
-    return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>;
+    console.log(this.state.checkout);
+    return (
+    <ShopContext.Provider>
+      {this.props.children}
+      </ShopContext.Provider>
+    )
   }
 }
 
-const ShopConsumer = Shopcontext.ShopConsumer;
+const ShopConsumer = ShopContext.Consumer;
 
 export { ShopConsumer, ShopContext };
 
