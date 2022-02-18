@@ -5,7 +5,7 @@ const ShopContext = React.createContext();
 
 const client = Client.buildClient({
   domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
-  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API
+  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API,
 });
 
 class ShopProvider extends Component {
@@ -18,19 +18,27 @@ class ShopProvider extends Component {
   };
 
   componentDidMount() {
-    this.createCheckout();
-  };
+    if (localStorage.check_id) {
+      this.fetchCheckout(localStorage.checkout_id);
+    } else {
+      this.createCheckout();
+    }
+  }
 
   //save cart state for user
   //local storage
   createCheckout = async () => {
     // Create an empty checkout
     const checkout = await client.checkout.create();
-    localStorage.setItem("checkout-id", checkout.id);
+    localStorage.setItem("checkout_id", checkout.id);
     this.setState({ checkout: checkout });
   };
 
-  fetchCheckout = async () => {};
+  fetchCheckout = async (checkoutId) => {
+    client.checkout.fetch(checkoutId).then((checkout) => {
+      this.setState({ checkout: checkout });
+    });
+  };
 
   addItemToCheckout = async () => {};
 
@@ -57,12 +65,8 @@ class ShopProvider extends Component {
   openMenu = () => {};
 
   render() {
-    console.log(this.state.checkout);
-    return (
-    <ShopContext.Provider>
-      {this.props.children}
-      </ShopContext.Provider>
-    )
+    // console.log(this.state.checkout);
+    return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>;
   }
 }
 
