@@ -16,7 +16,13 @@ const Navbar = () => {
       <Icon fill="white" as={MdMenu} w={30} h={30}></Icon>
       <Text>LOGO</Text>
       {/* <Image src="" w={100} h={100} /> */}
-      <Icon fill="white" as={MdShoppingCart} w={30} h={30}>
+      <Icon
+        fill="white"
+        as={MdShoppingCart}
+        w={30}
+        h={30}
+        onClick={() => openCart()}
+      >
         Cart
       </Icon>
     </Flex>
