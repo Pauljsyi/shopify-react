@@ -1,8 +1,9 @@
-import React from "react";
-import { shopContext } from "../context/shopContext";
+import React, { useContext } from "react";
+import { ShopContext } from "../context/shopContext";
+import { Link } from "react-router-dom";
 import {
   Box,
-  Link,
+  VStack,
   Image,
   Flex,
   Text,
@@ -18,7 +19,26 @@ import {
 } from "@chakra-ui/react";
 
 const NavMenu = () => {
-  return <div>NavMenu</div>;
+  const { isMenuOpen, closeMenu } = useContext(ShopContext);
+  return (
+    <Drawer isOpen={isMenuOpen} onClose={closeMenu} placement="left" size="sm">
+      <DrawerOverlay>
+        <DrawerContent>
+          <DrawerHeader>Menu</DrawerHeader>
+          <DrawerBody>
+            <VStack p="2rem">
+              <Link to="/">About Us</Link>
+              <Link to="/">Learn More</Link>
+              <Link to="/">Sustainability</Link>
+            </VStack>
+          </DrawerBody>
+          <DrawerFooter textAlign="center">
+            <Text w="100%">www.pauljsyi.com</Text>
+          </DrawerFooter>
+        </DrawerContent>
+      </DrawerOverlay>
+    </Drawer>
+  );
 };
 
 export default NavMenu;

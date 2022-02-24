@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Flex, Text, Icon, Image } from "@chakra-ui/react";
+import { Flex, Text, Icon, Image, Box, Badge } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import { MdMenu, MdShoppingCart } from "react-icons/md";
+// import { logo } from "../assets/images/white-pick.png";
 
 const Navbar = () => {
   const { openCart, openMenu, checkout } = useContext(ShopContext);
@@ -20,21 +21,25 @@ const Navbar = () => {
         w={30}
         h={30}
         onClick={() => openMenu()}
+        alignItems="center"
       ></Icon>
       <Link to="/">
-        <Text>LOGO</Text>
+        LOGO
+        {/* <Image src="white-pick.png" /> */}
       </Link>
-      {/* <Image src="" w={100} h={100} /> */}
-      <Icon
-        fill="white"
-        cursor="pointer"
-        as={MdShoppingCart}
-        w={30}
-        h={30}
-        onClick={() => openCart()}
-      >
-        Carts
-      </Icon>
+      <Box>
+        <Icon
+          fill="white"
+          cursor="pointer"
+          as={MdShoppingCart}
+          w={30}
+          h={30}
+          onClick={() => openCart()}
+        />
+        <Badge backgroundColor="#FF38BD" borderRadius="50%">
+          {checkout.lineItems?.length}
+        </Badge>
+      </Box>
     </Flex>
   );
 };

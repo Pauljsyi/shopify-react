@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./components/Cart";
+import NavMenu from "./components/NavMenu";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Router>
         <Navbar />
         <Cart />
+        <NavMenu />
         <Routes>
           <Route path="/products/:handle" element={<ProductPage />}></Route>
           <Route path="/" element={<Home />}></Route>
