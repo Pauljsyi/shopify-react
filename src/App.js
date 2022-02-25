@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./components/Cart";
 import NavMenu from "./components/NavMenu";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path="/products/:handle" element={<ProductPage />}></Route>
           <Route path="/" element={<Home />}></Route>
         </Routes>
-        <h1>FOOTER</h1>
+        <Footer />
       </Router>
     </div>
   );

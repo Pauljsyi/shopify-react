@@ -43,7 +43,13 @@ const ProductPage = () => {
           <Text pb="2rem" color="gray.500">
             {product.description}
           </Text>
-          <Button onClick={() => addItemToCheckout(product.variants[0].id, 1)}>
+          <Button
+            onClick={() => addItemToCheckout(product.variants[0].id, 1)}
+            _hover={{ opacity: "70%" }}
+            w="10rem"
+            backgroundColor="#FF38BD"
+            color="white"
+          >
             Add To Cart
           </Button>
         </Flex>
