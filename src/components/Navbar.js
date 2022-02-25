@@ -24,8 +24,11 @@ const Navbar = () => {
         alignItems="center"
       ></Icon>
       <Link to="/">
-        LOGO
-        {/* <Image src="white-pick.png" /> */}
+        <Image
+          src="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/Logologo_1.svg?v=1610055540"
+          w={100}
+          h={100}
+        />
       </Link>
       <Box>
         <Icon

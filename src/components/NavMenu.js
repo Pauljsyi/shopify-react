@@ -33,7 +33,7 @@ const NavMenu = () => {
             </VStack>
           </DrawerBody>
           <DrawerFooter textAlign="center">
-            <Text w="100%">www.pauljsyi.com</Text>
+            <Text w="100%">@ www.pauljsyi.com</Text>
           </DrawerFooter>
         </DrawerContent>
       </DrawerOverlay>
