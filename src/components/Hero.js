@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Text, Image, Center } from "@chakra-ui/react";
+import { Box, Text, Image, Center } from "@chakra-ui/react";
 
 const Hero = () => {
   return (
@@ -11,14 +11,14 @@ const Hero = () => {
     >
       <Image
         // src="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/Bath_Bomb_-_Product-4_-_nobg_1.png?v=1610055851.jpg"
-        src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/annie-spratt-yxk1vtoZqUg-unsplash.jpg?v=1645834769"
+        src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/annie-spratt-yxk1vtoZqUg-unsplash.jpg?v=1645915787"
         h="100%"
         m="auto"
         objectFit="contain"
         objectPosition={["top", "center"]}
       />
       <Text
-        className="text-focus-in"
+        className="text-pop-up-top"
         position="absolute"
         bottom={["50%", "0%"]}
         w="100%"

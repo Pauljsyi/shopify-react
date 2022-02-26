@@ -8,7 +8,6 @@ import {
   Button,
   Heading,
   Flex,
-  Center,
 } from "@chakra-ui/react";
 
 import { ShopContext } from "../context/shopContext";

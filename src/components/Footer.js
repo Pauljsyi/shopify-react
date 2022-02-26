@@ -7,8 +7,10 @@ const Footer = () => {
     <Box backgroundColor="rgb(232, 230, 230)">
       <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]}>
         <Image
+          w={["50%", "50%"]}
+          // marginLeft="50%"
+          m="auto"
           src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/annie-spratt-yxk1vtoZqUg-unsplash.jpg?v=1645834769"
-          justifyContent="center"
         />
         <VStack p="2rem">
           <Link to="/">Holiday Gift Candle Set</Link>

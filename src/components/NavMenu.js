@@ -2,20 +2,14 @@ import React, { useContext } from "react";
 import { ShopContext } from "../context/shopContext";
 import { Link } from "react-router-dom";
 import {
-  Box,
   VStack,
-  Image,
-  Flex,
   Text,
-  Grid,
   Drawer,
   DrawerBody,
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
-  Button,
 } from "@chakra-ui/react";
 
 const NavMenu = () => {

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Flex, Text, Icon, Image, Box, Badge } from "@chakra-ui/react";
+import { Flex, Icon, Image, Box, Badge } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import { MdMenu, MdShoppingCart } from "react-icons/md";
 // import { logo } from "../assets/images/white-pick.png";
