@@ -18,6 +18,7 @@ const Hero = () => {
         objectPosition={["top", "center"]}
       />
       <Text
+        className="tracking-in-contract-bck-bottom"
         position="absolute"
         bottom={["50%", "20%"]}
         w="100%"
@@ -25,9 +26,10 @@ const Hero = () => {
         color="black"
         // textShadow="2px 3px white"
         fontWeight="bold"
-        fontSize="4rem"
+        fontSize="3rem"
       >
-        Introducing Scented Candles
+        Introducing <br />
+        Scented Candles
       </Text>
       <Center>
         <Button

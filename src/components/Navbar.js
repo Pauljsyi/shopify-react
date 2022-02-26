@@ -25,6 +25,7 @@ const Navbar = () => {
       ></Icon>
       <Link to="/">
         <Image
+          className="shadow-pop-tr"
           src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/transparent_logo.png?v=1645836229"
           w={100}
           h={100}

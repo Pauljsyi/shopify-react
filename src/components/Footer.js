@@ -24,7 +24,7 @@ const Footer = () => {
       <Box>
         <Text
           textAlign="center"
-          color="white"
+          color="black"
           w="100%"
           borderTop="1px solid white"
           p="1rem"
