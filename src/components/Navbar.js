@@ -26,7 +26,7 @@ const Navbar = () => {
       <Link to="/">
         <Image
           className="shadow-pop-tr"
-          src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/transparent_logo.png?v=1645836229"
+          src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/pinklogo.png?v=1645862526"
           w={100}
           h={100}
         />
@@ -40,7 +40,12 @@ const Navbar = () => {
           h={30}
           onClick={() => openCart()}
         />
-        <Badge backgroundColor="#FF38BD" borderRadius="50%">
+        <Badge
+          backgroundColor="black"
+          borderRadius="50%"
+          color="white"
+          position="absolute"
+        >
           {checkout.lineItems?.length}
         </Badge>
       </Box>

@@ -18,21 +18,21 @@ const Hero = () => {
         objectPosition={["top", "center"]}
       />
       <Text
-        className="tracking-in-contract-bck-bottom"
+        className="text-focus-in"
         position="absolute"
-        bottom={["50%", "20%"]}
+        bottom={["50%", "0%"]}
         w="100%"
         textAlign="center"
-        color="black"
-        // textShadow="2px 3px white"
+        color="#FF38BD"
         fontWeight="bold"
-        fontSize="3rem"
+        fontSize="5rem"
+        fontFamily="Permanent Marker"
       >
         Introducing <br />
         Scented Candles
       </Text>
       <Center>
-        <Button
+        {/* <Button
           w="10rem"
           backgroundColor="#FF38BD"
           color="white"
@@ -41,7 +41,7 @@ const Hero = () => {
           bottom="10%"
         >
           Shop Now
-        </Button>
+        </Button> */}
       </Center>
     </Box>
   );
