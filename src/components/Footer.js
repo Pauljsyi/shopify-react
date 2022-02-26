@@ -4,13 +4,16 @@ import { Grid, Box, Text, Image, VStack } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box backgroundColor="#FFA8E2">
+    <Box backgroundColor="rgb(232, 230, 230)">
       <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]}>
-        <Image src="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/Bath_Bomb_-_Product-5_-_trans_1.png?v-1610123549" />
+        <Image
+          src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/annie-spratt-yxk1vtoZqUg-unsplash.jpg?v=1645834769"
+          justifyContent="center"
+        />
         <VStack p="2rem">
-          <Link to="/">The Green Blast</Link>
-          <Link to="/">The Blue Berry</Link>
-          <Link to="/">The Yellow Mellow</Link>
+          <Link to="/">Holiday Gift Candle Set</Link>
+          <Link to="/">Custom Gift Candle Set</Link>
+          <Link to="/">Scented Candle Jar Collection</Link>
         </VStack>
         <VStack p="2rem">
           <Link to="/">About Us</Link>

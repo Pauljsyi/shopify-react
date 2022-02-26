@@ -10,13 +10,13 @@ const Navbar = () => {
 
   return (
     <Flex
-      backgroundColor="#FFA8E2"
+      backgroundColor="rgb(255, 255, 255)"
       flexDir="row"
       justifyContent="space-between"
       p="2rem"
     >
       <Icon
-        fill="white"
+        fill="black"
         as={MdMenu}
         w={30}
         h={30}
@@ -25,14 +25,14 @@ const Navbar = () => {
       ></Icon>
       <Link to="/">
         <Image
-          src="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/Logologo_1.svg?v=1610055540"
+          src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/transparent_logo.png?v=1645836229"
           w={100}
           h={100}
         />
       </Link>
       <Box>
         <Icon
-          fill="white"
+          fill="black"
           cursor="pointer"
           as={MdShoppingCart}
           w={30}

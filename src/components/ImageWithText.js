@@ -6,7 +6,12 @@ const ImageWithText = ({ reverse, image, heading, text }) => {
   return (
     <Box>
       <Flex flexDir={["column", reverseSection]} w="100%">
-        <Image src={image} objectFit="cover" w={["100%", "50%"]} />
+        <Image
+          src={image}
+          objectFit="cover"
+          w={["100%", "50%"]}
+          maxH={["560"]}
+        />
         <Flex
           w={["100%", "50%"]}
           flexDir="column"
