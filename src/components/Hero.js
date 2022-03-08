@@ -25,7 +25,7 @@ const Hero = () => {
         textAlign="center"
         color="#FF38BD"
         fontWeight="bold"
-        fontSize="5rem"
+        fontSize="5vw"
         fontFamily="Permanent Marker"
       >
         Introducing <br />

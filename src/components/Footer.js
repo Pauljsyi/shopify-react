@@ -20,7 +20,6 @@ const Footer = () => {
         <VStack p="2rem">
           <Link to="/">About Us</Link>
           <Link to="/">Learn More</Link>
-          <Link to="/">Sustainability</Link>
         </VStack>
       </Grid>
       <Box>

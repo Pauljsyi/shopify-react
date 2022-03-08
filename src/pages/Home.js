@@ -14,7 +14,7 @@ const Home = () => {
 
   if (!products) return <div>Loading...</div>;
   return (
-    <Box>
+    <Box bg="rgb(27, 27, 38)">
       <Hero />
       <RichText
         heading="Lorem Ipsum"
@@ -38,7 +38,7 @@ const Home = () => {
               >
                 {product.title}
               </Text>
-              <Text position="absolute" bottom="5%" w="100%" color="white">
+              <Text position="absolute" bottom="5%" w="100%" color="white-">
                 $ {product.variants[0].price}
               </Text>
             </Box>
