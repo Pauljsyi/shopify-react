@@ -4,33 +4,36 @@ import { Box, Text, Image, Center } from "@chakra-ui/react";
 const Hero = () => {
   return (
     <Box
-      backgroundColor="rgb(232, 230, 230)"
-      w="100%"
+      // backgroundColor="rgb(232, 230, 230)"
+      // w="100%"
+      // h="50vh"
       position="relative"
-      h="70vh"
+      h="auto"
     >
-      <Image
-        // src="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/Bath_Bomb_-_Product-4_-_nobg_1.png?v=1610055851.jpg"
-        src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/annie-spratt-yxk1vtoZqUg-unsplash.jpg?v=1645915787"
-        h="100%"
-        m="auto"
-        objectFit="contain"
-        objectPosition={["top", "center"]}
-      />
-      <Text
-        className="text-pop-up-top"
-        position="absolute"
-        bottom={["50%", "0%"]}
-        w="100%"
-        textAlign="center"
-        color="#FF38BD"
-        fontWeight="bold"
-        fontSize="5vw"
-        fontFamily="Permanent Marker"
-      >
-        Introducing <br />
-        Scented Candles
-      </Text>
+      <Box h={["10vh", "20vh", "30vh", "40vh"]} overflow="hidden">
+        <Image
+          // src="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/Bath_Bomb_-_Product-4_-_nobg_1.png?v=1610055851.jpg"
+          src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/jay-zhang-F5sLpXuAShA-unsplash.jpg?v=1646789820"
+          w="100%"
+          h="auto"
+
+          // m="auto"
+        />
+        <Text
+          className="text-pop-up-top"
+          position="absolute"
+          bottom={["50%", "35%"]}
+          w="100%"
+          textAlign="center"
+          color="#FF38BD"
+          fontWeight="bold"
+          fontSize="3vw"
+          fontFamily="odin_roundedbold"
+        >
+          KEYBOARDS
+        </Text>
+      </Box>
+
       <Center>
         {/* <Button
           w="10rem"

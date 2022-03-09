@@ -18,7 +18,7 @@ const Home = () => {
       <Hero />
       <RichText
         heading="Lorem Ipsum"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        text="Mechanical keyboards are a type of keyboard that use mechanical switches to register keypresses. In the world of custom keyboards, you get fine-tuned control over how your keyboard looks and feels. You use and interact with one every day—it's worth making it perfect for you."
       />
       <Grid templateColumns="repeat(3, 1fr)">
         {products.map((product) => (
@@ -27,8 +27,10 @@ const Home = () => {
               _hover={{ opacity: "80%" }}
               textAlign="center"
               position="relative"
+              m="1rem auto"
+              w="90%"
             >
-              <Image src={product.images[0].src}></Image>
+              <Image src={product.images[0].src} borderRadius="10px"></Image>
               <Text
                 position="absolute"
                 bottom="15%"
