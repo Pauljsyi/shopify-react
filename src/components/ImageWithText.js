@@ -19,8 +19,8 @@ const ImageWithText = ({ reverse, image, heading, text }) => {
           alignItems="center"
           p="2rem"
         >
-          <Heading>{heading && heading}</Heading>
-          <Text>{text && text}</Text>
+          <Heading color="white">{heading && heading}</Heading>
+          <Text color="white">{text && text}</Text>
           <Button
             w="10rem"
             backgroundColor="#FF38BD"
