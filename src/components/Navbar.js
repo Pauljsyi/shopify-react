@@ -35,7 +35,7 @@ const Navbar = () => {
           color="rgb(229, 198, 70)"
           style={{ fontFamily: "odin_roundedbold" }}
         >
-          Klick Klack
+          Klick Klock
         </Heading>
       </Link>
       <Box>
