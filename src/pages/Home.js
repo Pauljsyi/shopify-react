@@ -17,7 +17,7 @@ const Home = () => {
     <Box bg="rgb(27, 27, 38)">
       <Hero />
       <RichText
-        heading="Lorem Ipsum"
+        heading="Mechanical Keyboards"
         text="Mechanical keyboards are a type of keyboard that use mechanical switches to register keypresses. In the world of custom keyboards, you get fine-tuned control over how your keyboard looks and feels. You use and interact with one every day—it's worth making it perfect for you."
       />
       <Grid templateColumns="repeat(3, 1fr)">
