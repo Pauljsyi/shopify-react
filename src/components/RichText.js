@@ -8,7 +8,9 @@ const RichText = ({ heading, text }) => {
         {/* <Heading py="2.5rem" fontFamily="odin_roundedbold">
           {heading && heading}
         </Heading> */}
-        <Text pb="2rem">{text && text}</Text>
+        <Text pb="2rem" color="white">
+          {text && text}
+        </Text>
       </Center>
     </Box>
   );
