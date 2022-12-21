@@ -12,6 +12,12 @@ const Home = () => {
     fetchAllProducts();
   }, [fetchAllProducts]);
 
+  console.log(products);
+
+  const reverse = (index) => {
+    return index % 2 === 0 ? reverse : null;
+  };
+
   if (!products) return <div>Loading...</div>;
   return (
     <Box bg="rgb(27, 27, 38)">
@@ -49,10 +55,18 @@ const Home = () => {
       </Grid>
       <RichText
         heading="Treat Yourself"
-
-        // text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       />
-      <ImageWithText
+      {products.map((product, index) => (
+        <ImageWithText
+          reverse={reverse(index)}
+          image={product.images[0].src}
+          heading={product.title}
+          text={product.description}
+        />
+      ))}
+
+      {/* <ImageWithText
         reverse
         image="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/hanna-balan-W-CDfBfMCzQ-unsplash_ce62c038-29cd-44ce-b7a0-8f8b76b61b56.jpg?v=1645834026"
         heading="Lorem Ipsum"
@@ -71,7 +85,7 @@ const Home = () => {
         heading="Lorem Ipsum"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         "
-      />
+      /> */}
     </Box>
   );
 };

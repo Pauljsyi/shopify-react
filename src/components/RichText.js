@@ -5,9 +5,9 @@ const RichText = ({ heading, text }) => {
   return (
     <Box p="4rem">
       <Center display="flex" flexDir="column" textAlign="center" color="white">
-        {/* <Heading py="2.5rem" fontFamily="odin_roundedbold">
+        <Heading py="2.5rem" fontFamily="odin_roundedbold">
           {heading && heading}
-        </Heading> */}
+        </Heading>
         <Text pb="2rem" color="white">
           {text && text}
         </Text>

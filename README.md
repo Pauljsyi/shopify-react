@@ -1,3 +1,5 @@
+# Klick Klack
+
 # Simple Shopify App (Headless CMS + React Storefront)
 
 Stack:
