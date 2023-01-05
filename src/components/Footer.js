@@ -21,9 +21,10 @@ const Footer = () => {
           allowFullScreen
         ></iframe> */}
         <p>
-          <a href="https://giphy.com/gifs/Fnatic-Studio-esports-loeya-fnatic-gKQ9YTaITol9EdC2Hi">
-            via GIPHY
-          </a>
+          <img
+            href="https://giphy.com/gifs/Fnatic-Studio-esports-loeya-fnatic-gKQ9YTaITol9EdC2Hi"
+            alt="gif"
+          />
         </p>
         <VStack p="2rem">
           <Link to="/">Holiday Gift Candle Set</Link>
