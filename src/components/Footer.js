@@ -10,8 +10,21 @@ const Footer = () => {
           w={["50%", "50%"]}
           // marginLeft="50%"
           m="auto"
-          src="https://cdn.shopify.com/s/files/1/0555/2717/8325/files/annie-spratt-yxk1vtoZqUg-unsplash.jpg?v=1645834769"
+          src="https://giphy.com/embed/gKQ9YTaITol9EdC2Hi"
         />
+        {/* <iframe
+          src="https://giphy.com/embed/gKQ9YTaITol9EdC2Hi"
+          width="480"
+          height="320"
+          frameBorder="0"
+          class="giphy-embed"
+          allowFullScreen
+        ></iframe> */}
+        <p>
+          <a href="https://giphy.com/gifs/Fnatic-Studio-esports-loeya-fnatic-gKQ9YTaITol9EdC2Hi">
+            via GIPHY
+          </a>
+        </p>
         <VStack p="2rem">
           <Link to="/">Holiday Gift Candle Set</Link>
           <Link to="/">Custom Gift Candle Set</Link>
