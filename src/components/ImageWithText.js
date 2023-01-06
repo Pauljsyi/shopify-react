@@ -21,14 +21,6 @@ const ImageWithText = ({ reverse, image, heading, text }) => {
         >
           <Heading color="white">{heading && heading}</Heading>
           <Text color="white">{text && text}</Text>
-          <Button
-            w="10rem"
-            backgroundColor="#FF38BD"
-            color="white"
-            _hover={{ opacity: "70%" }}
-          >
-            Buy Now
-          </Button>
         </Flex>
       </Flex>
     </Box>

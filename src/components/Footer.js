@@ -1,39 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, Box, Text, Image, VStack } from "@chakra-ui/react";
+import { Grid, Box, Text, Image, VStack, Video } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
     <Box backgroundColor="rgb(232, 230, 230)">
       <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]}>
-        <Image
-          w={["50%", "50%"]}
-          // marginLeft="50%"
-          m="auto"
-          src="https://giphy.com/embed/gKQ9YTaITol9EdC2Hi"
-        />
-        {/* <iframe
+        <iframe
           src="https://giphy.com/embed/gKQ9YTaITol9EdC2Hi"
           width="480"
           height="320"
           frameBorder="0"
           class="giphy-embed"
           allowFullScreen
-        ></iframe> */}
-        <p>
-          <img
-            href="https://giphy.com/gifs/Fnatic-Studio-esports-loeya-fnatic-gKQ9YTaITol9EdC2Hi"
-            alt="gif"
-          />
-        </p>
+        ></iframe>
+
         <VStack p="2rem">
-          <Link to="/">Holiday Gift Candle Set</Link>
-          <Link to="/">Custom Gift Candle Set</Link>
-          <Link to="/">Scented Candle Jar Collection</Link>
+          <Link to="/">Yellow Mellow 60</Link>
+          <Link to="/">Fruity Loops 60</Link>
+          <Link to="/">Clear Milky Black Alice 60</Link>
         </VStack>
         <VStack p="2rem">
-          <Link to="/">About Us</Link>
-          <Link to="/">Learn More</Link>
+          <Link to="/about">About Us</Link>
         </VStack>
       </Grid>
       <Box>

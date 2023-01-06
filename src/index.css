@@ -23,3 +23,8 @@ code {
 .heading {
   font-family: "odin_roundedbold";
 }
+
+#about-container {
+  height: 60vh;
+  margin-top: 50px;
+}
